@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &896373894895493346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3040447171046371123}
+  - component: {fileID: 6633098648847602048}
+  - component: {fileID: 8074568118994190121}
+  - component: {fileID: 54211370197423127}
+  m_Layer: 0
+  m_Name: _DialogueSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3040447171046371123
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896373894895493346}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -67.31196, y: -37.81209, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6633098648847602048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896373894895493346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73c3cae1fce845342993cf8eeafb6794, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
+  dialogue: {fileID: 11400000, guid: b48c666a66dd33640b9691307f32b395, type: 2}
+  variables: {fileID: 11400000, guid: 1a71ec521d708d64e8e7c5452b30d37d, type: 2}
+  ui: {fileID: 0}
+  speakerDB: {fileID: 11400000, guid: 6e68ff592bba0d748b2b6e70c94be4d9, type: 2}
+  fallbackToResources: 0
+  portraitsFolder: Portraits
+  voicesFolder: Voices
+  autoStart: 0
+  allowChoices: 0
+--- !u!114 &8074568118994190121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896373894895493346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 147f8de019ab4ef49ad7ab6dd5b0180b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VarsAutoLoad
+  vars: {fileID: 11400000, guid: 1a71ec521d708d64e8e7c5452b30d37d, type: 2}
+--- !u!114 &54211370197423127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896373894895493346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bb4f6d1831d8bc42b22088eecd7b0bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ConditionalAutoStart
+  dialogueManager: {fileID: 6633098648847602048}
+  variables: {fileID: 11400000, guid: 1a71ec521d708d64e8e7c5452b30d37d, type: 2}
+  dialogueNodeId: A0_Narrador
+  blockingFlag: hasIntroPlayed
